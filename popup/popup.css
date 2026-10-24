@@ -1,0 +1,209 @@
+:root {
+    --frame: #e9e9e9;
+    --page: #f9f9f9;
+    --card: #fff;
+    --card_border: rgba( 0, 0, 0, 0.08 );
+    --text_primary: #0f0f0f;
+    --text_secondary: #606060;
+    --divider: rgba( 0, 0, 0, 0.08 );
+    --hover: rgba( 0, 0, 0, 0.04 );
+    --track_off: #c6c6c6;
+    --accent: #ff0033;
+    --accent_soft: rgba( 255, 0, 51, 0.1 );
+    --glow: rgba( 255, 0, 51, 0.14 );
+    color-scheme: light;
+}
+
+@media ( prefers-color-scheme: dark ) {
+    :root {
+        --frame: #050505;
+        --page: #0f0f0f;
+        --card: #1c1c1c;
+        --card_border: rgba( 255, 255, 255, 0.06 );
+        --text_primary: #f1f1f1;
+        --text_secondary: #aaa;
+        --divider: rgba( 255, 255, 255, 0.07 );
+        --hover: rgba( 255, 255, 255, 0.04 );
+        --track_off: #3f3f3f;
+        --accent_soft: rgba( 255, 0, 51, 0.16 );
+        --glow: rgba( 255, 0, 51, 0.22 );
+        color-scheme: dark;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var( --frame );
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 336px;
+    margin: 0;
+    padding: 6px;
+    color: var( --text_primary );
+    font: 400 13px / 18px "Roboto", "Segoe UI", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+}
+
+.panel {
+    overflow: hidden;
+    padding: 0 12px 12px;
+    background: radial-gradient( 120% 90px at 50% 0, var( --glow ), transparent ) no-repeat, var( --page );
+    border: 1px solid var( --card_border );
+    border-radius: 18px;
+}
+
+.masthead {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 4px 12px;
+}
+
+.masthead_icon {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow( 0 4px 10px var( --glow ) );
+}
+
+.masthead_title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.card {
+    overflow: hidden;
+    background: var( --card );
+    border: 1px solid var( --card_border );
+    border-radius: 14px;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.row + .row {
+    border-top: 1px solid var( --divider );
+}
+
+.row:hover {
+    background: var( --hover );
+}
+
+.row_text {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.row_title {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.row_detail {
+    overflow: hidden;
+    color: var( --text_secondary );
+    font-size: 11.5px;
+    line-height: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.toggle_input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.toggle {
+    position: relative;
+    flex: 0 0 auto;
+    width: 34px;
+    height: 20px;
+    border-radius: 10px;
+    background: var( --track_off );
+    transition: background 0.2s ease;
+}
+
+.toggle::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.35 );
+    transition: transform 0.2s cubic-bezier( 0.2, 0.9, 0.3, 1.2 );
+}
+
+.toggle_input:checked + .toggle {
+    background: var( --accent );
+}
+
+.toggle_input:checked + .toggle::after {
+    transform: translateX( 14px );
+}
+
+.toggle_input:focus-visible + .toggle {
+    outline: 2px solid var( --accent );
+    outline-offset: 2px;
+}
+
+.reload_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0;
+    padding: 6px 6px 6px 14px;
+    background: var( --accent_soft );
+    border: 1px solid rgba( 255, 0, 51, 0.3 );
+    border-radius: 14px;
+}
+
+.reload_bar[hidden] {
+    display: none;
+}
+
+.reload_text {
+    font-weight: 500;
+}
+
+.reload_button {
+    padding: 7px 14px;
+    border: none;
+    border-radius: 18px;
+    background: var( --accent );
+    color: #fff;
+    font: 600 12.5px / 16px "Roboto", "Segoe UI", "Arial", sans-serif;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+
+.reload_button:hover {
+    filter: brightness( 1.1 );
+}

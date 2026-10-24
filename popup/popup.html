@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Old YouTube</title>
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <div class="panel">
+            <header class="masthead">
+                <img class="masthead_icon" src="../icons/icon_48.png" alt="">
+                <h1 class="masthead_title">Old YouTube</h1>
+            </header>
+
+            <main class="card" id="settings"></main>
+
+            <footer class="reload_bar" id="reload_bar" hidden>
+                <span class="reload_text">Reload YouTube to apply</span>
+                <button class="reload_button" id="reload_button" type="button">Reload</button>
+            </footer>
+        </div>
+
+        <template id="row_template">
+            <label class="row">
+                <span class="row_text">
+                    <span class="row_title"></span>
+                    <span class="row_detail"></span>
+                </span>
+                <input class="toggle_input" type="checkbox">
+                <span class="toggle" aria-hidden="true"></span>
+            </label>
+        </template>
+
+        <script src="../src/defaults.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>

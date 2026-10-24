@@ -1,0 +1,38 @@
+html.old_youtube_classic_layout ytd-watch-flexy #fixed-side-menu,
+html.old_youtube_classic_layout ytd-watch-flexy yt-side-rail-view-model {
+    display: none !important;
+}
+
+html.old_youtube_classic_layout ytd-watch-flexy[show-fixed-side-menu]:not( [fixed-panel-expanded] ) #columns::after,
+html.old_youtube_classic_layout ytd-watch-flexy[show-fixed-side-menu]:not( [fixed-panel-expanded] ) #secondary::after {
+    display: none !important;
+}
+
+html.old_youtube_classic_layout ytd-watch-flexy[show-fixed-side-menu]:not( [fixed-panel-expanded] ) #secondary-inner {
+    margin-right: 0 !important;
+}
+
+html.old_youtube_classic_player #movie_player,
+html.old_youtube_classic_player #ytd-player #container,
+html.old_youtube_classic_player .html5-video-player.ytp-transparent {
+    background: #000 !important;
+}
+
+html.old_youtube_classic_details yt-lockup-view-model [class*="TouchFeedbackShapeHoverEffect"],
+html.old_youtube_classic_details ytd-rich-item-renderer [class*="TouchFeedbackShapeHoverEffect"] {
+    display: none !important;
+}
+
+html.old_youtube_no_ambient #cinematics,
+html.old_youtube_no_ambient #cinematics-container,
+html.old_youtube_no_ambient #cinematic-container,
+html.old_youtube_no_ambient #cinematics-full-bleed-container,
+html.old_youtube_no_ambient ytd-cinematic-container-renderer,
+html.old_youtube_no_ambient .ytp-cinematic-container {
+    display: none !important;
+}
+
+html.old_youtube_no_ambient ytd-watch-flexy[cinematics-active] #columns,
+html.old_youtube_no_ambient ytd-watch-flexy[cinematics-enabled] #columns {
+    background: transparent !important;
+}

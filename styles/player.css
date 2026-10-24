@@ -1,0 +1,150 @@
+html.old_youtube_classic_player .html5-video-player.ytp-delhi-modern {
+    --yt-delhi-bottom-controls-height: 48px;
+    --yt-delhi-bottom-controls-height-xsmall-width-mode: 40px;
+    --yt-delhi-pill-height: 36px;
+    --yt-delhi-pill-top-height: 0px;
+    --yt-delhi-big-mode-bottom-controls-height: 54px;
+    --yt-delhi-big-mode-pill-height: 54px;
+    --yt-delhi-big-mode-pill-top-height: 0px;
+    --yt-frosted-glass-backdrop-filter-override: none;
+    --yt-sys-color-baseline--overlay-background-medium-light: transparent;
+    --yt-sys-color-baseline--overlay-button-secondary: transparent;
+    --yt-sys-color-baseline--overlay-tonal-hover: transparent;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-bottom {
+    height: 48px !important;
+    padding-top: 3px !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls {
+    height: 36px !important;
+    line-height: 36px !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern :is(
+    .ytp-left-controls,
+    .ytp-right-controls,
+    .ytp-right-controls-left,
+    .ytp-right-controls-right,
+    .ytp-volume-area,
+    .ytp-time-wrapper,
+    .ytp-time-display,
+    .ytp-play-button,
+    .ytp-prev-button,
+    .ytp-next-button,
+    .ytp-mute-button,
+    .ytp-chapter-title,
+    .ytp-autonav-toggle,
+    .ytp-button
+) {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls :is( .ytp-button, .ytp-volume-area, .ytp-chapter-title, .ytp-mute-button, .ytp-right-controls-left )::before,
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls :is( .ytp-button, .ytp-volume-area, .ytp-chapter-title, .ytp-mute-button, .ytp-right-controls-left )::after {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls :is( .ytp-left-controls, .ytp-right-controls, .ytp-right-controls-left, .ytp-right-controls-right ) {
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls .ytp-button {
+    width: 46px !important;
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    opacity: 0.9;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls .ytp-button:hover {
+    opacity: 1;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls .ytp-button svg {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 0 !important;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chrome-controls .ytp-play-button {
+    width: 46px !important;
+    height: 36px !important;
+    margin: 0 !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-volume-area {
+    display: flex !important;
+    align-items: center;
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-volume-area .ytp-volume-icon svg {
+    padding: 6px 0 !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-time-display,
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-time-wrapper {
+    height: 36px !important;
+    line-height: 36px !important;
+    margin: 0 !important;
+    padding: 0 5px !important;
+    font-size: 109% !important;
+    text-shadow: 0 0 2px rgba( 0, 0, 0, 0.5 );
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chapter-title.ytp-button {
+    height: 36px !important;
+    width: auto !important;
+    padding: 0 8px !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-right-controls-left::after {
+    display: none !important;
+}
+
+html.old_youtube_classic_player .ytp-gradient-bottom {
+    display: block !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-progress-bar-container {
+    bottom: 47px !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-progress-list,
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-chapter-hover-container {
+    border-radius: 0 !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-play-progress,
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-scrubber-button {
+    background: #f00 !important;
+}
+
+html.old_youtube_classic_player .ytp-popup,
+html.old_youtube_classic_player .ytp-settings-menu,
+html.old_youtube_classic_player .ytp-panel-menu {
+    border-radius: 2px !important;
+}
+
+html.old_youtube_classic_player .ytp-tooltip:not( .ytp-preview ) .ytp-tooltip-text {
+    border-radius: 2px !important;
+}
+
+html.old_youtube_classic_player .ytp-delhi-modern .ytp-large-play-button {
+    border-radius: 0 !important;
+    background: transparent !important;
+}

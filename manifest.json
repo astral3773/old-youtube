@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "Old YouTube",
+    "short_name": "old-youtube",
+    "version": "1.0.0",
+    "description": "YouTube the way it was around 2023: classic player controls, comments under the video, no hover blobs, with optional 2021 extras.",
+    "icons": {
+        "16": "icons/icon_16.png",
+        "32": "icons/icon_32.png",
+        "48": "icons/icon_48.png",
+        "128": "icons/icon_128.png"
+    },
+    "permissions": [ "storage" ],
+    "host_permissions": [ "*://www.youtube.com/*" ],
+    "action": {
+        "default_title": "Old YouTube",
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "icons/icon_16.png",
+            "32": "icons/icon_32.png",
+            "48": "icons/icon_48.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [ "*://www.youtube.com/*" ],
+            "js": [ "src/defaults.js", "src/bridge.js", "src/watch.js" ],
+            "css": [ "styles/watch.css", "styles/player.css" ],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": [ "*://www.youtube.com/*" ],
+            "js": [ "src/flags.js" ],
+            "run_at": "document_start",
+            "world": "MAIN",
+            "all_frames": true
+        }
+    ]
+}
