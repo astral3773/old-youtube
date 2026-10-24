@@ -2,7 +2,8 @@
 
 Vibe coded chromium extension that restores youtube to before the october update moving the comment section to the right.
 
-[Preview](preview.png)
+![Preview](preview.png)
+
 ## What it changes
 
 | Setting | Default | What it does |
