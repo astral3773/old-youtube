@@ -1,7 +1,8 @@
 # old-youtube
 
-A Chrome extension that rolls YouTube back to roughly 2023 and drops the newer 2024–2026 changes. The ambient glow is off by default and can be turned back on.
+Vibe coded chromium extension that restores youtube to before the october update moving the comment section to the right.
 
+[Preview](preview.png)
 ## What it changes
 
 | Setting | Default | What it does |
@@ -19,10 +20,3 @@ A Chrome extension that rolls YouTube back to roughly 2023 and drops the newer 2
 4. Reload any open YouTube tabs.
 
 Click the toolbar icon to change settings. After a change, a **Reload** button appears that refreshes your YouTube tabs.
-
-## How it works
-
-- `src/flags.js` runs in the page before YouTube boots. It wraps `ytcfg.set` and pins the overridden `EXPERIMENT_FLAGS` so later writes can't flip them back. It also rewrites each player's `serializedExperimentFlags`.
-- `src/bridge.js` syncs settings from `chrome.storage` into `localStorage` and sets `old_youtube_*` classes on `<html>`, so the page script can read them at `document_start`.
-- `src/watch.js` keeps comments under the video.
-- `styles/` holds the CSS for each setting, gated by those classes. `player.css` also flattens the new player if YouTube ever ignores the flags.
